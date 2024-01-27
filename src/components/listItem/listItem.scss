@@ -6,6 +6,7 @@
   overflow: hidden;
   cursor: pointer;
   color: white;
+  position: relative;
 
   img {
     width: 100%;
@@ -21,7 +22,6 @@
     top: 0;
     left: 0;
   }
-
   &:hover {
     width: 325px;
     height: 300px;
@@ -34,8 +34,7 @@
     img {
       height: 140px;
     }
-
-    .itemInfo {
+    .iteminfo {
       display: flex;
       flex-direction: column;
       padding: 5px;
@@ -66,12 +65,10 @@
           margin: 0 10px;
         }
       }
-
       .desc {
         font-size: 13px;
         margin-bottom: 10px;
       }
-
       .genre {
         font-size: 14px;
         color: lightgray;

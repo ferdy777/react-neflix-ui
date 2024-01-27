@@ -1,7 +1,8 @@
-import { InfoOutlined, PlayArrow } from "@material-ui/icons";
+import React from "react";
 import "./featured.scss";
+import { InfoOutlined, PlayArrow } from "@material-ui/icons";
 
-export default function Featured({ type }) {
+const Featured = ({ type }) => {
   return (
     <div className="featured">
       {type && (
@@ -26,19 +27,19 @@ export default function Featured({ type }) {
         </div>
       )}
       <img
-        src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+        src="https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmF0bWFuJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww"
         alt=""
       />
       <div className="info">
         <img
-          src="https://occ-0-1432-1433.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABUZdeG1DrMstq-YKHZ-dA-cx2uQN_YbCYx7RABDk0y7F8ZK6nzgCz4bp5qJVgMizPbVpIvXrd4xMBQAuNe0xmuW2WjoeGMDn1cFO.webp?r=df1"
+          src="https://images.pexels.com/photos/987586/pexels-photo-987586.jpeg?auto=compress&cs=tinysrgb&w=600"
           alt=""
         />
         <span className="desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-          adipisci repellendus eum quasi illo, velit numquam, maxime tempora
-          sint deleniti, aliquid qui? Facilis, adipisci! Ratione hic repudiandae
-          temporibus eum earum?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+          laborum, modi sint nobis ratione quod quam et laudantium eligendi quos
+          nisi vitae provident illum exercitationem culpa cupiditate temporibus,
+          quas omnis!
         </span>
         <div className="buttons">
           <button className="play">
@@ -53,4 +54,6 @@ export default function Featured({ type }) {
       </div>
     </div>
   );
-}
+};
+
+export default Featured;

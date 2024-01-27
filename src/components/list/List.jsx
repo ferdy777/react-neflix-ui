@@ -1,32 +1,31 @@
+import React, { useRef, useState } from "react";
+import "./list.scss";
+import ListItem from "../listItem/ListItem";
 import {
   ArrowBackIosOutlined,
   ArrowForwardIosOutlined,
 } from "@material-ui/icons";
-import { useRef, useState } from "react";
-import ListItem from "../listItem/ListItem";
-import "./list.scss";
 
-export default function List() {
+const List = () => {
+  const [sliderNumber, setSlideNumber] = useState(0);
   const [isMoved, setIsMoved] = useState(false);
-  const [slideNumber, setSlideNumber] = useState(0);
-
   const listRef = useRef();
 
   const handleClick = (direction) => {
     setIsMoved(true);
     let distance = listRef.current.getBoundingClientRect().x - 50;
-    if (direction === "left" && slideNumber > 0) {
-      setSlideNumber(slideNumber - 1);
-      listRef.current.style.transform = `translateX(${230 + distance}px)`;
+    if (direction === "left" && sliderNumber > 0) {
+      setSlideNumber(sliderNumber - 1);
+      listRef.current.style.transform = `translatex(${230 + distance}px)`;
     }
-    if (direction === "right" && slideNumber < 5) {
-      setSlideNumber(slideNumber + 1);
-      listRef.current.style.transform = `translateX(${-230 + distance}px)`;
+    if (direction === "right" && sliderNumber < 5) {
+      setSlideNumber(sliderNumber + 1);
+      listRef.current.style.transform = `translatex(${-230 + distance}px)`;
     }
   };
   return (
     <div className="list">
-      <span className="listTitle">Continue to watch</span>
+      <span className="list-ttile">Contiue to watch</span>
       <div className="wrapper">
         <ArrowBackIosOutlined
           className="sliderArrow left"
@@ -52,4 +51,6 @@ export default function List() {
       </div>
     </div>
   );
-}
+};
+
+export default List;
